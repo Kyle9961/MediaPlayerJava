@@ -8,20 +8,24 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
+<?import org.controlsfx.control.HiddenSidesPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kylegd.mediaplayer.MediafxmlController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kylegd.mediaplayer.MediafxmlController">
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <MediaView fx:id="mvView" fitHeight="200.0" fitWidth="200.0" />
-            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <StackPane prefHeight="63.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <HiddenSidesPane pinnedSide="BOTTOM" prefHeight="42.0" prefWidth="800.0" style="-fx-background-color: black;" />
+            <VBox prefHeight="35.0" prefWidth="800.0">
                <children>
-                  <Slider fx:id="sliderProgress" prefHeight="14.0" prefWidth="576.0">
-                     <VBox.margin>
-                        <Insets left="7.0" right="7.0" />
-                     </VBox.margin>
-                  </Slider>
-                  <HBox prefHeight="50.0" prefWidth="600.0">
+                  <Slider fx:id="sliderProgress" prefHeight="14.0" prefWidth="576.0" />
+                  <HBox prefHeight="55.0" prefWidth="800.0">
                      <children>
                         <Button mnemonicParsing="false" onAction="#chooseFile" text="File">
                            <HBox.margin>
@@ -74,5 +78,5 @@
             </VBox>
          </children>
       </StackPane>
-   </center>
+   </bottom>
 </BorderPane>

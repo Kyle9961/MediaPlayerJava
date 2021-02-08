@@ -14,7 +14,6 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
@@ -28,7 +27,7 @@ import javafx.util.Duration;
  *
  * @author Ir0nZer0
  */
-public class MediafxmlController implements Initializable {
+public class MediafxmlController {
     @FXML private MediaView mvView;
     @FXML private MediaPlayer mp;
     @FXML private Slider sliderProgress,sliderVol;
@@ -102,12 +101,5 @@ public class MediafxmlController implements Initializable {
     
     public void backTen(ActionEvent event){
         mp.seek(mp.getCurrentTime().add(Duration.seconds(-10)));
-    }
-    
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        
-    }    
-    
+    } 
 }
